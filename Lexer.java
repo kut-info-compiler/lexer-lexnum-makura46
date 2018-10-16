@@ -63,7 +63,7 @@ public class Lexer {
 		{8, 8, 2, 2, 2, 8},
 		{4, 8, 3, 3, 2, 8},
 		{8, 8, 4, 4, 8, 8},
-		{9, 9, 5, 5, 2, 9},
+		{8, 8, 5, 5, 2, 8},
 		{8, 8, 2, 2, 2, 8},
 		{8, 8, 4, 4, 8, 8}
 	};
@@ -93,9 +93,6 @@ public class Lexer {
 			/* 行先がなければループを抜ける */
 			/* 行先が受理状態であれば「最後の受理状態」を更新する */
 			if (nextState == 8) {
-				break;
-			} else if (nextState == 9) {
-				acceptPos = 1;
 				break;
 			} else if (nextState == 4) {
 				acceptType = Token.TYPE_DEC;
